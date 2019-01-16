@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'mobx-react';          // Provider를 불러오고
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import CounterStore from './core/counterStore'  // store를 불러온 뒤에
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const counter = new CounterStore();             // 스토어 인스턴트를 만든다.
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <Provider counter={counter}>                 {/* Provider에 props로 넣어주면 끝! */}
+    <App />
+  </Provider>
+  , document.getElementById('root'));
