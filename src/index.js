@@ -7,7 +7,7 @@ import CounterStore from './core/counterStore'  // store를 불러온 뒤에
 const counter = new CounterStore();             // 스토어 인스턴트를 만든다.
 
 ReactDOM.render(
-  <Provider counter={counter}>                 {/* Provider에 props로 넣어주면 끝! */}
+  <Provider counter={counter}>{/* Provider에 props로 넣어주면 끝! */}
     <App />
   </Provider>
   , document.getElementById('root'));
