@@ -6,7 +6,7 @@ import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import { Provider } from 'mobx-react';
-import counterStore from '../core/counterStore';
+import counterStore from '../../core/counterStore';
 
 configure({ adapter: new Adapter() });
 
