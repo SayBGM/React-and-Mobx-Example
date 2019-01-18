@@ -6,7 +6,6 @@ import TodoInput from './TodoInput';
 @observer
 class Todo extends Component {
   render() {
-    const { todo } = this.props;
     return (
       <div className="Todo">
         <TodoInput />
