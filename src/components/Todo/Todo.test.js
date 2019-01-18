@@ -25,27 +25,31 @@ describe('Todo 컴포넌트 테스트', () => {
     expect(wrapper.props().todo.Todo.length).toBe(0);
   }) 
 
-  it('Todo 추가', () => {
-    const wrapper = mount(connectApp());
-    wrapper.props().todo.addTodo('Test context');
-    expect(wrapper.props().todo.Todo[0].context).toBe('Test context');
-  })
+  // it('Todo 추가', () => {
+  //   const wrapper = mount(connectApp());
+  //   wrapper.instance().setState({ context: 'Test context' }, () => {
+  //     wrapper.find('form').simulate('submit');
+  //     expect(wrapper.find('div.Todo__List--0__context').at(0).text()).toBe('Test context');
+  //   });
+  // })
 
-  it('Todo 제거', () => {
-    const wrapper = mount(connectApp());
-    wrapper.props().todo.addTodo('Test context');
-    expect(wrapper.props().todo.Todo[0].context).toBe('Test context');
-    expect(wrapper.props().todo.Todo.length).toBe(1);
-    wrapper.props().todo.removeTodo(0);
-    expect(wrapper.props().todo.Todo.length).toBe(0);
-  });
+  // it('Todo 제거', () => {
+  //   const wrapper = mount(connectApp());
+  //   wrapper.instance().setState({ context: 'Test context' }, () => {
+  //     wrapper.find('form').simulate('submit');
+  //     expect(wrapper.find('div.Todo__List--0__context').at(0).text()).toBe('Test context');
+  //     wrapper.find('span.Todo__List--0__delete').simulate('click');
+  //     expect(wrapper.props().todo.Todo.length).toBe(0);
+  //   });
+  // });
 
-  it('Todo 상태변환', () => {
-    const wrapper = mount(connectApp());
-    wrapper.props().todo.addTodo('Test context');
-    expect(wrapper.props().todo.Todo[0].context).toBe('Test context');
-    expect(wrapper.props().todo.Todo.length).toBe(1);
-    wrapper.props().todo.changeFinish(0);
-    expect(wrapper.props().todo.Todo[0].finish).toBeTruthy();
-  })
+  // it('Todo 상태변환', () => {
+  //   const wrapper = mount(connectApp());
+  //   wrapper.instance().setState({ context: 'Test context' }, () => {
+  //     wrapper.find('form').simulate('submit');
+  //     expect(wrapper.find('div.Todo__List--0__context').at(0).text()).toBe('Test context');
+  //     wrapper.find('div.Todo__List--0__context').simulate('click');
+  //     expect(wrapper.find('div.Todo__List--0__context--finish').at(0).text()).toBe('Test context');
+  //   });
+  // })
 })
