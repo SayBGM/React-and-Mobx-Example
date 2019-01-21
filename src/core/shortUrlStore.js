@@ -6,14 +6,14 @@ export default class ShortUrlStore{
   @observable status = false;
 
   @action makeShortUrl = (url) => {
-    axios.get(`http://34.85.56.122:3000/url?url=${url}`).then(res => {
+    axios.get(`http://34.85.56.122:3000/url?url=${url}`).then((res) => {
       if (res.data.code === "200") {
         this.shortUrl = res.data.result.url;
         this.status = true;
-      } else {
-        this.shortUrl = 'URL을 확인 후 다시 입력해주세요.'
-        this.status = false;
       }
+    }).catch((err) => {
+      this.shortUrl = 'URL을 확인 후 다시 입력해주세요.'
+      this.status = true;
     })
   }
 }
