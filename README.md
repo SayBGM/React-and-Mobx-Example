@@ -16,7 +16,6 @@ ES7에 새로 제안된 문법으로 현재 stage 2, 초고 단계에 있다. (T
 
 Decorator는 Java의 Annotation과 문법이 유사하여 Java Spring Framework를 주로 하던 사람이더라도 쉽게 배울 수 있어 러닝커브를 줄일 수 있는 효과를 가진다. 아래 코드를 보면 무슨 말을 하는지 쉽게 이해할 수 있다.
 
-***
 
 ### JavaScript Decorator
 ```javascript
@@ -41,7 +40,7 @@ public class RiderServiceeImpl implements RiderService {
 ```
 
 하지만 현재 공식적인 문법이 아니기 때문에 babel설정을 해주어야한다.
-
+***
 
 ### CRA를 통해 만든 앱일 경우
 #### 터미널
