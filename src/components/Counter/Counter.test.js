@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CounterComponent from './Counter';
 
