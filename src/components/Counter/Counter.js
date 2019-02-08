@@ -7,7 +7,7 @@ class CounterApp extends Component {
   render() { 
     const { counter } = this.props;
     return (
-      <div>
+      <div className="counter">
         <h1 className='value'>{counter.number}</h1>
         <button className='btn__plus' onClick={counter.increase}>+</button>
         <button className='btn__minus' onClick={counter.decrease}>-</button>

@@ -9,7 +9,9 @@ class Todo extends Component {
     return (
       <div className="Todo">
         <TodoInput />
-        <TodoList />
+        <ul>
+          <TodoList />
+        </ul>
       </div>
     );
   }
@@ -31,9 +33,9 @@ class TodoList extends Component{
     const { todo } = this.props;
     return todo.Todo.map((item, index) => {
       return (
-      <div className={`Todo__List--${index}__context${item.finish ? '--finish' : ''}`} key={index} onClick={() => todo.changeFinish(index)}>
-        {item.context} <span className={`Todo__List--${index}__context__delete`} onClick={() => todo.removeTodo(index)}>X</span>
-      </div>)
+      <li className={`Todo__List__context${item.finish ? '--finish' : ''}`} key={index} onClick={() => todo.changeFinish(index)}>
+        {item.context} <span className={`Todo__List__context__delete`} onClick={() => todo.removeTodo(index)}>X</span>
+      </li>)
     })
   }
 }

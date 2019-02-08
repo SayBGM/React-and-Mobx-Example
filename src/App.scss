@@ -1,0 +1,32 @@
+.App {
+    &__contents {
+        width: 30vw;
+        height: 50vh;
+        margin: 20vh auto;
+    }
+}
+
+.Todo {
+    width: 200px;
+    margin: 0 auto;
+    &__List {
+        &__context {
+            position: relative;
+            width: 100px;
+            &__delete {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+
+.counter {
+    width: 45px;
+    margin: 0 auto;
+}
+
+.shorturl {
+    width: 250px;
+    margin: 0 auto;
+}
