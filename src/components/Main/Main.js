@@ -11,6 +11,7 @@ const Main = () => (
         <li><Link to="/shorturl">단축 URL {'('}axios 활용{')'}</Link></li>
         <li><Link to="/counter">카운트</Link></li>
         <li><Link to="/todo">To-do</Link></li>
+        <li><Link to="/socket">소켓</Link></li>
       </ui>
     </div>
   </div>
